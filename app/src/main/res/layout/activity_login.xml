@@ -27,6 +27,7 @@
         android:text="Username: "
         android:textColor="@color/black" />
 
+    tools:ignore="SpeakableTextPresentCheck"
     <EditText
         android:id="@+id/inputUsername"
         android:layout_width="match_parent"
@@ -35,8 +36,7 @@
         android:layout_marginBottom="30dp"
         android:inputType="text"
         android:minHeight="48dp"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:autofillHints="" />
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/txtViewPassword"
@@ -55,7 +55,7 @@
         android:inputType="textPassword"
         android:minHeight="48dp"
         tools:ignore="SpeakableTextPresentCheck"
-        android:autofillHints="" />
+        android:importantForAutofill="no"/>
 
     <Button
         android:id="@+id/btnLogin"
