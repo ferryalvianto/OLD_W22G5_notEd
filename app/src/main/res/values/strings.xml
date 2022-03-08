@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">notEd</string>
     <string name="splash_test">Splash test</string>
+    <string name="btnLogOut">Log Out</string>
+    <string name="txtViewMainTitle">Title</string>
+    <string name="editTxtContent">Write here &#8230;</string>
 </resources>

@@ -8,15 +8,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.getbase.floatingactionbutton.FloatingActionButton;
+
 public class MainActivity extends AppCompatActivity {
 
     Button logout;
+    FloatingActionButton fabAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        fabAdd = findViewById(R.id.fabAdd);
         logout = findViewById(R.id.btnLogout);
 
         logout.setOnClickListener(new View.OnClickListener() {
@@ -32,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
+        });
+
+        fabAdd.setOnClickListener((View view) -> {
+
+            startActivity(new Intent(MainActivity.this,NoteMain.class));
         });
     }
 }
