@@ -41,22 +41,30 @@ public class SignupActivity extends AppCompatActivity {
             if (user.equals("") || pass.equals("") || repass.equals("") || fname.equals("")) {
                 Toast.makeText(SignupActivity.this, "Input cannot be empty. Please input username or password correctly.", Toast.LENGTH_SHORT).show();
             } else {
-                if (pass.equals(repass)) {
-                    Boolean checkuser = DB.CheckUsername(user);
-                    if (checkuser == false) {
-                        Boolean insert = DB.InsertData(user, pass, fname, lname);
-                        if (insert == true) {
-                            Toast.makeText(SignupActivity.this, "Successfully registered.", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                            startActivity(intent);
+                if (fname.matches(".*\\d.*") || lname.matches(".*\\d.*")) {
+                    Toast.makeText(SignupActivity.this, "Name contains number! Please input alphabetical values.", Toast.LENGTH_SHORT).show();
+                } else {
+                    if (pass.length() > 7) {
+                        if (pass.equals(repass)) {
+                            Boolean checkuser = DB.CheckUsername(user);
+                            if (checkuser == false) {
+                                Boolean insert = DB.InsertData(user, pass, fname, lname);
+                                if (insert == true) {
+                                    Toast.makeText(SignupActivity.this, "Successfully registered.", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    startActivity(intent);
+                                } else {
+                                    Toast.makeText(SignupActivity.this, "Registration failed.", Toast.LENGTH_SHORT).show();
+                                }
+                            } else {
+                                Toast.makeText(SignupActivity.this, "User exists! Please sign in.", Toast.LENGTH_SHORT).show();
+                            }
                         } else {
-                            Toast.makeText(SignupActivity.this, "Registration failed.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignupActivity.this, "Password does not match! Please try again.", Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        Toast.makeText(SignupActivity.this, "User exists! Please sign in.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignupActivity.this, "Password has to be 8 characters minimum.", Toast.LENGTH_SHORT).show();
                     }
-                } else {
-                    Toast.makeText(SignupActivity.this, "Password does not match! Please try again.", Toast.LENGTH_SHORT).show();
                 }
             }
         });

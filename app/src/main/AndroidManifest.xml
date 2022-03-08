@@ -12,6 +12,7 @@
         <activity
             android:name=".SignupActivity"
             android:exported="false"
+            android:noHistory="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
             android:name=".SplashActivity"
