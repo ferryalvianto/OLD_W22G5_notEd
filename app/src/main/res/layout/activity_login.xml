@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Login">
+    tools:context=".LoginActivity">
 
 
     <TextView
@@ -27,16 +27,17 @@
         android:text="Username: "
         android:textColor="@color/black" />
 
-    tools:ignore="SpeakableTextPresentCheck"
     <EditText
         android:id="@+id/inputUsername"
+        android:hint="Enter username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="30dp"
+        android:importantForAutofill="no"
         android:inputType="text"
         android:minHeight="48dp"
-        android:importantForAutofill="no" />
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/txtViewPassword"
@@ -48,6 +49,7 @@
 
     <EditText
         android:id="@+id/inputPassword"
+        android:hint="Enter password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
@@ -63,14 +65,21 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginBottom="25dp"
-        android:text="boom" />
+        android:text="Log In" />
+
+    <TextView
+        android:id="@+id/txtViewCreateAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account?"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/txtViewSignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Don't have an account? Create here"
-        android:textAlignment="center" />
+        android:text="Sign up here."
+        android:textAlignment="center"/>
 
 
 
