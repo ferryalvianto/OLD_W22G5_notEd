@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NotEd">
         <activity
+            android:name=".NoteMain"
+            android:exported="false" />
+        <activity
             android:name=".SignupActivity"
             android:exported="false"
             android:noHistory="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -27,12 +30,12 @@
         </activity>
         <activity
             android:name=".LoginActivity"
+            android:exported="true"
             android:noHistory="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-        android:exported="true"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
