@@ -1,9 +1,11 @@
-package com.example.noted;
+package com.example.noted.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.noted.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

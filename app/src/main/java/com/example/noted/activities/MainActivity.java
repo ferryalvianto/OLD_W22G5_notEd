@@ -1,4 +1,4 @@
-package com.example.noted;
+package com.example.noted.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.noted.R;
 import com.getbase.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         fabAdd.setOnClickListener((View view) -> {
 
-            startActivity(new Intent(MainActivity.this,NoteMain.class));
+            startActivity(new Intent(MainActivity.this, NoteMain.class));
         });
     }
 }

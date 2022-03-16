@@ -1,4 +1,4 @@
-package com.example.noted;
+package com.example.noted.database;
 
 import android.content.ContentValues;
 import android.content.Context;

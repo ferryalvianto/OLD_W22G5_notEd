@@ -1,17 +1,18 @@
-package com.example.noted;
+package com.example.noted.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.noted.database.DBHelper;
+import com.example.noted.R;
 
 public class LoginActivity extends AppCompatActivity {
 
