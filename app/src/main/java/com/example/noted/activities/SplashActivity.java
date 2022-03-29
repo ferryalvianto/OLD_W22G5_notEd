@@ -6,6 +6,8 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.noted.R;
+import com.example.noted.database.DBHelper;
+import com.example.noted.model.Note;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -27,6 +29,9 @@ public class SplashActivity extends AppCompatActivity {
 
         Timer timer = new Timer();
         timer.schedule(timerTask,3000);
+
+        //DBHelper db = new DBHelper(this);
+        //db.addNote(new Note(0, "title", "content", "asdf"));
 
     }
 }

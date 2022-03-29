@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.example.noted.database.DBHelper;
 import com.example.noted.R;
+import com.example.noted.model.User;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -52,6 +53,7 @@ public class SignupActivity extends AppCompatActivity {
                             if (checkuser == false) {
                                 Boolean insert = DB.InsertData(user, pass, fname, lname);
                                 if (insert == true) {
+                                    DB.addUser(new User(user, pass, fname,lname));
                                     Toast.makeText(SignupActivity.this, "Successfully registered.", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
